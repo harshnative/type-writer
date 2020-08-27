@@ -16,6 +16,10 @@ Quickly add type writer sound effect to your windows pc
 
 Direct download instable file from [here](https://drive.google.com/uc?export=download&id=1iGDC-_PtT63aQUB1bN_yJB6gHCsJJY1n)
 
+some times while installing this may appear
+
+![windows smart screen protection](https://github.com/[harshnative]/[type-writer]/blob/[master]/image.jpg?raw=true)
+
 ignore any risk warings while installing the program , they appear because we are samll developers and don't have official license to these softwares...
 
 #### 100% Virus Free - checked and scanned by top antivirus

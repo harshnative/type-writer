@@ -41,10 +41,15 @@ pathToBat = pathToBat[:-1]
 
 # function to add file to startup
 def add_to_startup(file_path=""):
-    
-    bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
-    with open(bat_path + '\\' + "typeWriterStartup.bat", "w+") as bat_file:
-        bat_file.write(r'start "" %s' % file_path)
+
+    try:
+        bat_path = 'C:/Users/%s/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup' % USER_NAME
+        with open(bat_path + '/' + "typeWriterStartup.bat", "w+") as bat_file:
+            bat_file.write(r'start "" %s' % file_path)
+    except FileNotFoundError:
+        bat_path = 'C:/Users/Admin/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup'
+        with open(bat_path + '/' + "typeWriterStartup.bat", "w+") as bat_file:
+            bat_file.write(r'start "" %s' % file_path)
 
 
 add_to_startup(pathToBat)
