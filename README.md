@@ -34,6 +34,8 @@ We thank every person who have commited anything to the open source world, those
 
 we cannot even imagine the world without the open source things
 
+icon by - [Freepik](Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>)
+
 
 #### Special thanks to pynput module for providing most of the source code for this project
 
