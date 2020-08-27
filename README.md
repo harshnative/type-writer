@@ -18,7 +18,7 @@ Direct download installable file from [here](https://drive.google.com/uc?export=
 
 some times while installing this may appear
 
-![windows smart screen protection](https://github.com/[harshnative]/[type-writer]/blob/[master]/setup1.jpg?raw=true)
+![windows smart screen protection](setup1.jpg?raw=true "Windows smart screen protection")
 
 click on more info and then click on run anyaway to install
 
