@@ -1,10 +1,12 @@
 # Type Writer
 
-bored of typing on low end non mechanical keyboard , well now download this program from [here]() and your computer will now make type writer like sound
+bored of typing on low end non mechanical keyboard , well now download this program from [here](https://drive.google.com/uc?export=download&id=1iGDC-_PtT63aQUB1bN_yJB6gHCsJJY1n) and your computer will now make type writer like sound
 
 watch the demo video [here]()
 
 Quickly add type writer sound effect to your windows pc
+
+### Note : this program starts at the startup of the windows 
 
 ***
 ***
@@ -12,9 +14,9 @@ Quickly add type writer sound effect to your windows pc
 
 ## Installation -
 
-Download the executable from the releases section of [Github](https://github.com/harshnative/JARVIS/releases)
+Direct download instable file from [here](https://drive.google.com/uc?export=download&id=1iGDC-_PtT63aQUB1bN_yJB6gHCsJJY1n)
 
-or direct download from [here]()
+ignore any risk warings while installing the program , they appear because we are samll developers and don't have official license to these softwares...
 
 #### 100% Virus Free - checked and scanned by top antivirus
 #### This program does not log anything , so its completely safe to use

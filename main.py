@@ -1,45 +1,53 @@
+from sys import path
 from pynput import keyboard
 import pygame
 import os
 import ctypes
-import time
+import sys
 
+# determine if application is a script file or frozen exe
+if getattr(sys, 'frozen', False):
+    application_path = os.path.dirname(sys.executable)
+
+
+
+# function for collapsing the application onces started
 def collapse(hide=False):
     """Minimize or hide window."""
     ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0 if hide else 6)  # SW_HIDE or SW_MINIMIZE
 
+
 # using pygame to play sound
 pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=512)
-s = pygame.mixer.Sound('sounds/keysound30.wav')
-e = pygame.mixer.Sound('sounds/ding3.wav')
+
+s = pygame.mixer.Sound( os.path.join(application_path + '\sounds\keysound30.wav'))
+e = pygame.mixer.Sound( os.path.join(application_path + '\sounds\ding3.wav'))
+
 
 # for adding to the startup folder
 import getpass
 USER_NAME = getpass.getuser()
 
-import sys
+application_path = application_path + r"\typeWriter.exe"
 
-application_path = ""
+apPathList = application_path.split("\\")
 
-# determine if application is a script file or frozen exe
-if getattr(sys, 'frozen', False):
-    application_path = os.path.dirname(sys.executable)
-elif __file__:
-    application_path = os.path.dirname(__file__)
+pathToBat = ""
+for i in apPathList:
+    pathToBat = pathToBat + '"' + i + '"' + "\\"
+
+pathToBat = pathToBat[:-1]
 
 
+# function to add file to startup
 def add_to_startup(file_path=""):
-    if file_path == "":
-        file_path = os.path.dirname(os.path.realpath(__file__))
+    
     bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
-    with open(bat_path + '\\' + "open.bat", "w+") as bat_file:
+    with open(bat_path + '\\' + "typeWriterStartup.bat", "w+") as bat_file:
         bat_file.write(r'start "" %s' % file_path)
 
-os.system("cls")
-if(application_path == ""):
-    print("error in adding program to startup\n\n")
-else:
-    add_to_startup(application_path)
+
+add_to_startup(pathToBat)
 
 collapse(True)
 
@@ -62,5 +70,3 @@ with keyboard.Listener(
 listener = keyboard.Listener(
     on_press=on_press)
 listener.start()
-
-
